@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@layer components{
+    .btn-primary{
+        @apply px-5 py-2 text-white bg-primary text-lg font-medium rounded-sm transition duration-300  w-fit cursor-pointer hover:bg-secondary
+    }
+    .btn-secondary{
+        @apply px-5 py-2 text-white bg-transparent border border-primary text-lg font-medium rounded-sm transition duration-300  w-fit cursor-pointer hover:bg-white hover:text-black
+    }
+    .btn-tertiary{
+        @apply px-5 py-1 border border-black font-medium rounded-sm  w-fit
+    }
+}
+
+@theme {
+    --color-grey: #808080;
+    --color-light: #ececec;
+    --color-bg: #14003e;
+    --color-primary: #b79b37;
+    --color-secondary: #7a6516;
+    --color-faint: #b79b3729;
+    --color-faintbtn: #e9e9e9d9;
+}
+
+
+body{
+  overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
