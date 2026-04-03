@@ -63,12 +63,7 @@ const Footer = () => {
               className="text-2xl text-white bg-primary p-3 rounded-full hover:bg-secondary transition duaration-300"
             />
           </a>
-          <a href="https://www.tiktok.com/@mindset.gadgets?_r=1&_t=zs-942acun2zwy">
-            <FontAwesomeIcon
-              icon={faFacebookF}
-              className="text-2xl text-white bg-primary p-3 rounded-full hover:bg-secondary transition duaration-300"
-            />
-          </a>
+          
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ function App() {
   },[])
   return (
     <Router>
-      <div className="app">
+      <div className="overflow-hidden">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

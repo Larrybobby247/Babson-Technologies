@@ -17,7 +17,7 @@ const Hero = () => {
           performance.
         </p>
         <div className="flex" data-aos="fade-right">
-          <button className="btn-primary">Shop Now</button>
+          <button className="btn-primary"><a href="https://wa.me/2348065584046">Shop Now</a></button>
         </div>
       </div>
       <div className="" data-aos="fade-right">
