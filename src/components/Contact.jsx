@@ -26,7 +26,7 @@ const Contact = () => {
       className="flex flex-col gap-12 lg:flex-row lg:justify-between items-center"
       id="contact-us"
     >
-      <div className="flex flex-col gap-3 lg:w-[80%]" data-aos="fade-left">
+      <div className="flex flex-col gap-3 lg:w-[80%]" data-aos="fade-right">
         <h3 className="text-4xl font-bold">Contact Us</h3>
         <p className="text-lg text-grey">
           Ready to upgrade? Visit us at our branches in

@@ -12,17 +12,17 @@ const Footer = () => {
   return (
     <div className="mt-20 bg-faint flex flex-col gap-6 px-6 lg:px-14 py-6">
       <div className="flex flex-col gap-8 lg:flex-row lg:justify-between lg:items-center">
-        <div className="flex gap-4 flex-col">
+        <div className="flex gap-4 flex-col" data-aos="fade-right">
           <Link to="/" onClick={() => window.scrollTo(0, 0)}>
             <img src={Logo} alt="" className="w-28" />
           </Link>
-          <p className="lg:w-100">
+          <p className="lg:w-100" data-aos="fade-right">
             At Babson Technologies, we don’t just sell electronics, we provide the reliable
             tools you need to succeed in a digital world. Where Reliability
             Meets Technology, we make excellence affordable for you
           </p>
         </div>
-        <ul className="flex flex-col lg:flex-row gap-4 lg:gap-8 font-medium text-lg">
+        <ul className="flex flex-col lg:flex-row gap-4 lg:gap-8 font-medium text-lg" data-aos="fade-right">
           <li className="transition duration-300 hover:text-primary">
             <Link to="/" className="" onClick={() => window.scrollTo(0, 0)}>
               Home
