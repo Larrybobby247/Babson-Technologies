@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import Img from "../assets/hero-img.png";
+import Img from "../assets/contact-img.jpg";
 import {
   fa11ty,
   faFacebook,
