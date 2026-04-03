@@ -19,6 +19,7 @@ import Img2 from "../assets/cat-2.jpg";
 import Img3 from "../assets/cat-3.jpg";
 import Img4 from "../assets/cat-4.jpg";
 import Img5 from "../assets/cat-5.jpg";
+import Img6 from "../assets/cat-6.jpg";
 
 const Categories = () => {
   const CategoryLists = [
@@ -50,7 +51,7 @@ const Categories = () => {
   {
     id: 6,
     name: "Audio & Wearables",
-    img: Img1,
+    img: Img6,
   }
 ];
 

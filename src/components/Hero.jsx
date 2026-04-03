@@ -5,17 +5,18 @@ import Img1 from "../assets/hero-img.png";
 
 const Hero = () => {
   return (
-    <div className="bg-faint flex flex-col gap-12 lg:gap-16 lg:flex-row px-8 lg:px-18 xl:px-28 h-[90vh] lg:items-center">
-      <div className="mt-12 flex flex-col gap-4 lg:w-[70%]">
+    <div className="bg-faint flex flex-col gap-5 lg:gap-16 lg:flex-row px-8 lg:px-18 xl:px-28 h-[90vh] lg:items-center">
+      <div className="mt-10 flex flex-col gap-3 lg:w-[70%]">
         <h1 className="text-4xl lg:text-[52px] font-bold">
-          Powering Your Lifestyle with Smart, Reliable Technology
+          Empowering Your Digital World: Where Reliability Meets Technology
         </h1>
-        <p className="text-lg text-grey mb-4">
-          Mindset Gadget is a modern tech and gadget brand focused on providing
-          quality electronic devices and accessories such as smartphones and
-          other smart gadgets.
+        <p className="text-lg text-grey mb-2">
+          Welcome to Babson Technologies, your number-one hub for premium
+          gadgets in Ibadan. We specialize in top-tier laptops and the latest
+          smartphones, ensuring you never have to compromise on quality or
+          performance.
         </p>
-        <div className="flex gap-4 ">
+        <div className="flex">
           <button className="btn-primary">Shop Now</button>
         </div>
       </div>

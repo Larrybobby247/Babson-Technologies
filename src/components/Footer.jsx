@@ -17,40 +17,28 @@ const Footer = () => {
             <img src={Logo} alt="" className="w-28" />
           </Link>
           <p className="lg:w-100">
-            Mindset Gadget is a modern tech and gadget brand focused on
-            providing quality electronic devices and accessories such as
-            smartphones and other smart gadgets.
+            At Babson Technologies, we don’t just sell electronics, we provide the reliable
+            tools you need to succeed in a digital world. Where Reliability
+            Meets Technology, we make excellence affordable for you
           </p>
         </div>
         <ul className="flex flex-col lg:flex-row gap-4 lg:gap-8 font-medium text-lg">
-          <li
-            className="transition duration-300 hover:text-primary"
-            
-          >
+          <li className="transition duration-300 hover:text-primary">
             <Link to="/" className="" onClick={() => window.scrollTo(0, 0)}>
               Home
             </Link>
           </li>
-          <li
-            className="transition duration-300 hover:text-primary"
-            
-          >
+          <li className="transition duration-300 hover:text-primary">
             <Link to="/" className="" onClick={() => window.scrollTo(0, 0)}>
               Products
             </Link>
           </li>
-          <li
-            className="transition duration-300 hover:text-primary"
-            
-          >
+          <li className="transition duration-300 hover:text-primary">
             <Link to="/" className="" onClick={() => window.scrollTo(0, 0)}>
               What We Do
             </Link>
           </li>
-          <li
-            className="transition duration-300 hover:text-primary"
-            
-          >
+          <li className="transition duration-300 hover:text-primary">
             <Link to="/" className="" onClick={() => window.scrollTo(0, 0)}>
               Contact Us
             </Link>

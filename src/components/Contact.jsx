@@ -29,10 +29,10 @@ const Contact = () => {
       <div className="flex flex-col gap-3 lg:w-[80%]" data-aos="fade-left">
         <h3 className="text-4xl font-bold">Contact Us</h3>
         <p className="text-lg text-grey">
-          We are built on reliability, affordability and customer's
-          satisfaction, aiming to deliver top notch tech solutions while
-          maintaining a strong relationship with both existing and intending
-          customers.
+          Ready to upgrade? Visit us at our branches in
+          Ibadan, or send us a message on WhatsApp. You can also
+          explore our latest arrivals on Instagram. Let’s get you
+          the perfect gadget today!
         </p>
         <div className="grid  md:grid-cols-2 gap-4">
           <div className="flex items-center gap-2">
