@@ -1,124 +1,100 @@
-import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
+import { useState, useEffect } from "react";
+import iraSiteData from "../data/iraSiteData";
+import { faBars, faPlaneDeparture, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Logo from "../assets/logo.png";
 
-const Navbar = () => {
-  const [nav, setNav] = useState(false);
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { brand } = iraSiteData;
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const navLinks = ["Services", "Why Us", "Testimonials", "Contact"];
+
   return (
-    <div className="relative sticky top-0 left-0 flex justify-between items-center px-5 py-4 lg:px-12 lg:py-6 bg-white shadow-sm z-5">
-      <Link
-        to="/"
-        onClick={() => window.scrollTo(0, 0)}
-        className="text-3xl font-bold"
-      >
-        <img src={Logo} alt="" className="w-14" />
-      </Link>
-
-      {/* Large Screen nav links */}
-      <ul className="lg:flex gap-5 font-medium text-lg hidden">
-        <li
-          className="transition duration-300 hover:text-primary"
-          onClick={() => setNav(false)}
-        >
-          <Link to="/" className="" onClick={() => window.scrollTo(0, 0)}>
-            Home
-          </Link>
-        </li>
-        <li
-          className="transition duration-300 hover:text-primary"
-          onClick={() => setNav(false)}
-        >
-          <a
-            href="#products"
-            className=""
-            onClick={() => window.scrollTo(0, 0)}
-          >
-            Products
-          </a>
-        </li>
-        <li
-          className="transition duration-300 hover:text-primary"
-          onClick={() => setNav(false)}
-        >
-          <a
-            href="#services"
-            className=""
-            onClick={() => window.scrollTo(0, 0)}
-          >
-            What We Do
-          </a>
-        </li>
-        <li
-          className="transition duration-300 hover:text-primary"
-          onClick={() => setNav(false)}
-        >
-          <a
-            href="#contact-us"
-            className=""
-            onClick={() => window.scrollTo(0, 0)}
-          >
-            Contact Us
-          </a>
-        </li>
-      </ul>
-      <div className="flex items-center gap-2 lg:gap-8">
-        <button className="btn-primary"><a href="https://wa.me/2348065584046">Place Order</a></button>
-        <div
-          className={`lg:hidden text-3xl cursor-pointer ${nav ? "hidden" : "block"}`}
-          onClick={() => setNav(true)}
-        >
-          <FontAwesomeIcon icon={faBars} />
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-[#0d1f4f]/95 backdrop-blur-md shadow-lg shadow-blue-900/30 py-3"
+          : "bg-transparent py-5"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-5 flex items-center justify-between">
+        {/* Logo */}
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-full bg-[#facc15] flex items-center justify-center shadow-md">
+            <i className=" font-bold text-[#1e3a8a] text-lg"><FontAwesomeIcon icon={faPlaneDeparture}/></i>
+          </div>
+          <div className="leading-tight">
+            <p className="text-white font-extrabold text-sm tracking-wide uppercase">IRA Ticketing</p>
+            <p className="text-[#facc15] text-[10px] tracking-widest uppercase font-semibold">& Travel Agency</p>
+          </div>
         </div>
 
-        <div
-          className={`text-3xl cursor-pointer ${nav ? "block" : "hidden"}`}
-          onClick={() => setNav(false)}
+        {/* Desktop Links */}
+        <ul className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <li key={link}>
+              <a
+                href={`#${link.toLowerCase().replace(" ", "-")}`}
+                className="text-white/80 hover:text-[#facc15] text-sm font-medium tracking-wide transition-colors duration-200 relative group"
+              >
+                {link}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#facc15] group-hover:w-full transition-all duration-300"></span>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* CTA */}
+        <a
+          href="#contact"
+          className="hidden md:inline-flex items-center gap-2 bg-[#facc15] text-[#1e3a8a] font-bold text-sm px-5 py-2.5 rounded-full hover:bg-yellow-300 transition-all duration-200 shadow-lg shadow-yellow-400/30"
         >
-          <FontAwesomeIcon icon={faClose} />
-        </div>
+          <i className="fa-brands fa-whatsapp text-base"></i>
+          Get Started
+        </a>
+
+        {/* Mobile toggle */}
+        <button
+          className="md:hidden text-white text-xl p-2"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <i className={`fa-solid ${menuOpen ? "fa-xmark" : "fa-bars"}`}>{menuOpen ? <FontAwesomeIcon icon={faXmark}/> : <FontAwesomeIcon icon={faBars}/>}</i>
+        </button>
       </div>
 
-      {/* small screen nav links */}
-      <ul
-        className={`absolute right-1 top-20 bg-white text-primary flex flex-col gap-8 py-8 transition-translate duration-400 px-12 rounded-sm text-2xl font-medium shadow-lg ${nav ? "right-1" : "right-[-100%]"}`}
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden transition-all duration-300 overflow-hidden ${
+          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
       >
-        <li className="" onClick={() => setNav(false)}>
-          <Link to="/" className="" onClick={() => window.scrollTo(0, 0)}>
-            Home
-          </Link>
-        </li>
-        <li className="" onClick={() => setNav(false)}>
+        <div className="bg-[#0d1f4f]/98 border-t border-white/10 px-5 py-4 flex flex-col gap-4">
+          {navLinks.map((link) => (
+            <a
+              key={link}
+              href={`#${link.toLowerCase().replace(" ", "-")}`}
+              className="text-white/80 hover:text-[#facc15] text-sm font-medium py-1"
+              onClick={() => setMenuOpen(false)}
+            >
+              {link}
+            </a>
+          ))}
           <a
-            href="#products"
-            className=""
-            onClick={() => window.scrollTo(0, 0)}
+            href="#contact"
+            className="inline-flex items-center justify-center gap-2 bg-[#facc15] text-[#1e3a8a] font-bold text-sm px-5 py-2.5 rounded-full mt-2"
+            onClick={() => setMenuOpen(false)}
           >
-            Products
+            <i className="fa-brands fa-whatsapp"></i> Get Started
           </a>
-        </li>
-        <li className="" onClick={() => setNav(false)}>
-          <a
-            href="#services"
-            className=""
-            onClick={() => window.scrollTo(0, 0)}
-          >
-            What We Do
-          </a>
-        </li>
-        <li className="" onClick={() => setNav(false)}>
-          <a
-            href="#contact-us"
-            className=""
-            onClick={() => window.scrollTo(0, 0)}
-          >
-            Contact Us
-          </a>
-        </li>
-      </ul>
-    </div>
+        </div>
+      </div>
+    </nav>
   );
-};
-
-export default Navbar;
+}
