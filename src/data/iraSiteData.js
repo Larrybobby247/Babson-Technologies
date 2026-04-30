@@ -72,7 +72,7 @@ const iraSiteData = {
   ],
   contact: {
     shortDescription: "Ready to start your journey? Reach out to our expert consultants for stress-free travel planning and visa support.",
-    email: "info@iraticketing.com",
+    email: "iraticketing@gmail.com",
     phones: {
       nigeria: ["+234 708 912 9690", "+234 907 112 4626"],
       uk: "+44 753 522 3123",
