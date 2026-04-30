@@ -36,6 +36,40 @@ const iraSiteData = {
     { id: 2, name: "Sarah Adebayo", role: "Traveler", content: "They saved me over 200k on my flight to Canada. Their WhatsApp response is super fast.", rating: 5 },
     { id: 3, name: "Emmanuel T.", role: "Work Permit Holder", content: "The process for my Norway work permit was seamless and well-explained.", rating: 5 }
   ],
+  destinations: [
+    {
+      id: 1,
+      name: "Kuwait City, Kuwait",
+      tag: "Work Visa Specialist",
+      description: "Fast-track work visa processing and high-paying career opportunities.",
+      image:
+        "https://images.unsplash.com/photo-1549497538-303791108f95?w=600&auto=format&fit=crop&q=80",
+    },
+    {
+      id: 2,
+      name: "Dubai, UAE",
+      tag: "Tourist Favorite",
+      description: "Seamless tourist visas and business exploration in the world's most luxurious hub.",
+      image:
+        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&auto=format&fit=crop&q=80",
+    },
+    {
+      id: 3,
+      name: "London, UK",
+      tag: "Study Abroad",
+      description: "2026 University admissions and relocation pathways for students and families.",
+      image:
+        "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&auto=format&fit=crop&q=80",
+    },
+    {
+      id: 4,
+      name: "Canada",
+      tag: "Permanent Residency",
+      description: "Complete relocation advisory and proof of funds assistance for Canadian immigration.",
+      image:
+        "https://images.unsplash.com/photo-1517090504586-fde19ea6066f?w=600&auto=format&fit=crop&q=80",
+    },
+  ],
   contact: {
     shortDescription: "Ready to start your journey? Reach out to our expert consultants for stress-free travel planning and visa support.",
     email: "info@iraticketing.com",

@@ -2,11 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import iraSiteData from "../data/iraSiteData";
 import { faLink, faPlaneDeparture } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import Logo from '../assets/logo.jpg'
 
 export default function Footer() {
   const { brand, footer, socials, contact } = iraSiteData;
 
-  const quickLinks = ["Services", "Why Us", "Testimonials", "Contact"];
+  const quickLinks = ["Services", "Destinations", "Why Us", "Testimonials", "Contact"];
   const services = iraSiteData.services.map(s => s.title);
 
   return (
@@ -23,7 +24,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-5">
               <div className="w-10 h-10 rounded-full bg-[#facc15] flex items-center justify-center">
-                <i className="fa-solid fa-plane-departure text-[#1e3a8a] text-lg"><FontAwesomeIcon icon={faPlaneDeparture}/></i>
+                <img src={Logo} alt="logo" className="rounded-full w-full h-full"/>
               </div>
               <div>
                 <p className="text-white font-extrabold text-sm tracking-wide uppercase">IRA Ticketing</p>

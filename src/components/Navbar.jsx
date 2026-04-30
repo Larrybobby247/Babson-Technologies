@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import iraSiteData from "../data/iraSiteData";
 import { faBars, faPlaneDeparture, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Logo from '../assets/logo.jpg'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -14,7 +15,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const navLinks = ["Services", "Why Us", "Testimonials", "Contact"];
+  const navLinks = ["Services", "Destinations", "Why Us", "Testimonials", "Contact"];
 
   return (
     <nav
@@ -28,7 +29,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-[#facc15] flex items-center justify-center shadow-md">
-            <i className=" font-bold text-[#1e3a8a] text-lg"><FontAwesomeIcon icon={faPlaneDeparture}/></i>
+            <img src={Logo} alt="logo" className="rounded-full w-full h-full"/>
           </div>
           <div className="leading-tight">
             <p className="text-white font-extrabold text-sm tracking-wide uppercase">IRA Ticketing</p>
